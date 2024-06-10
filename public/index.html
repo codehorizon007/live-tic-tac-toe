@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="joinSection" class="section">
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <input type="text" id="username" placeholder="Enter your name">
+            <div class="button-group">
+                <button id="createButton">Create Game</button>
+                <button id="randomButton">Random Join</button>
+            </div>
+            <div class="join-group">
+                <input type="text" id="gameId" placeholder="Enter Game ID">
+                <button id="joinButton">Join Game</button>
+            </div>
+
+            <div id="gameInfo"></div>
+        </div>
+    </div>
+    <div id="gameSection" class="section hidden">
+        <div class="game-container">
+            <div id="playerInfo" class="side-panel">
+                <h2>Players</h2>
+                <p id="playerX"></p>
+                <p id="playerO"></p>
+                <div id="status"></div>
+                <button id="restartButton" class="hidden">Restart Game</button>
+            </div>
+            <div id="gameBoard" class="board"></div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div id="modalContent" class="modal-content"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
